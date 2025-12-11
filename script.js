@@ -44,4 +44,44 @@ if ("IntersectionObserver" in window) {
   // fallback simples
   animated.forEach((el) => el.classList.add("is-visible"));
 }
-a
+
+// -------- Vitrine de projetos (carrossel) --------
+const projectGrid = document.querySelector(".project-grid");
+const prevBtn = document.querySelector(".carousel-btn.prev");
+const nextBtn = document.querySelector(".carousel-btn.next");
+
+if (projectGrid && prevBtn && nextBtn) {
+  const getScrollAmount = () => {
+    const card = projectGrid.querySelector(".project-card");
+    if (!card) return projectGrid.clientWidth;
+
+    const cardRect = card.getBoundingClientRect();
+    return cardRect.width + 24; // 24px ~ gap
+  };
+
+  const updateButtons = () => {
+    const maxScroll = projectGrid.scrollWidth - projectGrid.clientWidth - 4; // folguinha
+
+    prevBtn.disabled = projectGrid.scrollLeft <= 0;
+    nextBtn.disabled = projectGrid.scrollLeft >= maxScroll;
+  };
+
+  prevBtn.addEventListener("click", () => {
+    projectGrid.scrollBy({
+      left: -getScrollAmount(),
+      behavior: "smooth",
+    });
+  });
+
+  nextBtn.addEventListener("click", () => {
+    projectGrid.scrollBy({
+      left: getScrollAmount(),
+      behavior: "smooth",
+    });
+  });
+
+  projectGrid.addEventListener("scroll", updateButtons);
+
+  // estado inicial
+  updateButtons();
+}
