@@ -7,10 +7,10 @@ Site estático em **HTML, CSS e JavaScript**, sem dependências de build.
 
 ## Design
 
-Identidade visual inspirada no estilo da **Anthropic / Claude**:
+Tema escuro, sóbrio e moderno:
 
-- Fundo marfim (`#F0EEE6`) com textura sutil de papel
-- Acento terracota *"clay"* (`#CC785C`)
+- Fundo grafite/navy (`#0C0F16`) com brilho ambiente sutil
+- Acento esmeralda (`#34D399`) e azul de apoio (`#5EA0F2`)
 - Tipografia serifada editorial (**Fraunces**) + **Inter** no corpo + **JetBrains Mono** nos rótulos
 
 ## Estrutura
