@@ -88,4 +88,73 @@
     );
     sections.forEach((section) => spy.observe(section));
   }
+
+  // Formulário de contato: monta a mensagem e envia por WhatsApp ou e-mail
+  const form = document.getElementById("contact-form");
+  if (form) {
+    const WHATSAPP = "5561996885766";
+    const EMAIL = "jeffersongabriel.contato@gmail.com";
+    const errorEl = document.getElementById("cf-error");
+
+    const val = (id) => (document.getElementById(id)?.value || "").trim();
+
+    const buildMessage = () => {
+      const nome = val("cf-nome");
+      const contato = val("cf-contato");
+      const tipo = val("cf-tipo");
+      const resumo = val("cf-resumo");
+
+      const linhas = [
+        "Olá Jefferson! Vim pelo seu portfólio.",
+        "",
+        "Nome: " + nome,
+        "Tipo de projeto: " + tipo,
+      ];
+      if (contato) linhas.push("Contato: " + contato);
+      linhas.push("", "Resumo:", resumo);
+      return linhas.join("\n");
+    };
+
+    const send = (channel) => {
+      const nome = val("cf-nome");
+      const resumo = val("cf-resumo");
+
+      if (!nome || !resumo) {
+        if (errorEl) errorEl.hidden = false;
+        (nome ? document.getElementById("cf-resumo") : document.getElementById("cf-nome")).focus();
+        return;
+      }
+      if (errorEl) errorEl.hidden = true;
+
+      const tipo = val("cf-tipo");
+      const message = buildMessage();
+
+      if (channel === "email") {
+        const subject = "Contato via portfólio: " + tipo;
+        window.location.href =
+          "mailto:" + EMAIL +
+          "?subject=" + encodeURIComponent(subject) +
+          "&body=" + encodeURIComponent(message);
+      } else {
+        window.open(
+          "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(message),
+          "_blank",
+          "noopener"
+        );
+      }
+    };
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      send("whatsapp");
+    });
+
+    const emailBtn = form.querySelector('[data-channel="email"]');
+    if (emailBtn) emailBtn.addEventListener("click", () => send("email"));
+
+    // some o erro assim que o usuário começa a corrigir
+    form.addEventListener("input", () => {
+      if (errorEl && !errorEl.hidden) errorEl.hidden = true;
+    });
+  }
 })();

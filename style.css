@@ -1,5 +1,5 @@
 /* ================================================================
-   Jefferson Gabriel — Portfólio
+   Jefferson Gabriel, Portfólio
    Tema escuro: grafite/navy com acento esmeralda e apoio azul.
    ================================================================ */
 
@@ -14,7 +14,7 @@
   --ink-2: #B7C1D1;   /* texto secundário */
   --muted: #7C879D;   /* texto apagado */
 
-  /* Accent — esmeralda primária + azul de apoio */
+  /* Accent: esmeralda primaria e azul de apoio */
   --accent:    #34D399;
   --accent-d:  #10B981;
   --accent-2:  #5EA0F2;   /* azul de apoio */
@@ -93,15 +93,6 @@ ul, ol { list-style: none; padding: 0; }
   display: flex; align-items: center; justify-content: space-between; height: 70px;
 }
 .brand { display: inline-flex; align-items: center; gap: .6rem; font-weight: 600; }
-.brand-mark {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 32px; height: 32px; border-radius: 9px;
-  background: var(--bg-3); border: 1px solid var(--line-2);
-  font-family: var(--font-serif); font-size: .9rem; font-weight: 600;
-  color: var(--accent); letter-spacing: .02em;
-  transition: border-color .3s var(--ease), transform .3s var(--ease);
-}
-.brand:hover .brand-mark { border-color: var(--accent); transform: translateY(-1px); }
 .brand-name { font-family: var(--font-serif); font-size: 1.12rem; letter-spacing: -.01em; }
 
 .primary-nav { display: flex; align-items: center; gap: .35rem; }
@@ -339,6 +330,48 @@ ul, ol { list-style: none; padding: 0; }
 }
 .contact-list a { font-size: .95rem; color: var(--ink); word-break: break-word; }
 .contact-list a:hover { color: var(--accent); }
+
+/* contact form */
+.contact-form {
+  position: relative; z-index: 1; text-align: left;
+  display: grid; gap: 1rem; margin-bottom: 2rem;
+}
+.field { display: grid; gap: .45rem; }
+.field label {
+  font-family: var(--font-mono); font-size: .74rem; text-transform: uppercase;
+  letter-spacing: .07em; color: var(--ink-2);
+}
+.field label span { text-transform: none; letter-spacing: 0; color: var(--muted); }
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%; font-family: var(--font-sans); font-size: .96rem;
+  color: var(--ink); background: var(--bg); border: 1px solid var(--line-2);
+  border-radius: 11px; padding: .8rem .95rem; transition: border-color .2s, box-shadow .2s;
+}
+.contact-form textarea { resize: vertical; min-height: 110px; }
+.contact-form select {
+  appearance: none; cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8' fill='none' stroke='%237C879D' stroke-width='1.6'%3E%3Cpath d='M1 1.5 6 6.5l5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.4rem;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder { color: var(--muted); }
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none; border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.form-error { color: #ff9b8c; font-size: .85rem; margin-top: -.2rem; }
+.form-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: .3rem; }
+.form-actions .btn { cursor: pointer; }
+
+.contact-or {
+  position: relative; z-index: 1;
+  font-family: var(--font-mono); font-size: .76rem; text-transform: uppercase;
+  letter-spacing: .08em; color: var(--muted); margin-bottom: 1rem;
+}
 
 /* --------------------------------- footer -------------------------------- */
 .site-footer { border-top: 1px solid var(--line); padding: 2rem 0; }
