@@ -157,4 +157,131 @@
       if (errorEl && !errorEl.hidden) errorEl.hidden = true;
     });
   }
+
+  // -------------------------------------------------------------------------
+  // Idioma (PT/EN). O HTML está em português; o dicionário abaixo traz o EN.
+  // Ao voltar para PT, restauramos o texto original capturado do DOM.
+  // -------------------------------------------------------------------------
+  const EN = {
+    "skip": "Skip to content",
+    "nav.sobre": "About", "nav.exp": "Experience", "nav.stack": "Stack",
+    "nav.proj": "Projects", "nav.contato": "Contact",
+    "hero.eyebrow": "Available for freelance work",
+    "hero.title": 'A <em>full stack</em> developer building enterprise systems, <span class="hl">REST APIs</span> and end-to-end <span class="hl">automation</span>.',
+    "hero.lead": "I'm Jefferson. Based in Brasília, I have spent over three years building enterprise software in <strong>PHP&nbsp;/&nbsp;Yii2</strong>, from gathering requirements with business teams to delivery and sign-off with managers.",
+    "btn.projetos": "View projects",
+    "btn.contato": 'Get in touch <span aria-hidden="true">&rarr;</span>',
+    "btn.cv": "Download CV",
+    "facts.now.t": "Currently",
+    "facts.now.d": "Mid-level Full Stack Developer<br /><span>Stefanini, at BBTS</span>",
+    "facts.stack.t": "Stack",
+    "facts.stack.d": "PHP &middot; Yii2 &middot; REST APIs<br /><span>BPMN &middot; Supravizio &middot; IronPython</span>",
+    "facts.base.t": "Based in",
+    "facts.base.d": "Taguatinga, Brazil<br /><span>Remote</span>",
+    "facts.lang.t": "Languages",
+    "facts.lang.d": "Portuguese (native)<br /><span>English (professional)</span>",
+    "sec.01.num": "01, About",
+    "sec.01.h": "Focused on systems that must be secure, integrated and scalable.",
+    "about.p1": "I work as a mid-level full stack developer focused on enterprise systems, REST APIs and business process automation. Today I am responsible for architecting and evolving a contract management system, going through the whole cycle: requirements, data modeling, code, cross-platform integrations and presenting deliverables.",
+    "about.p2": "I value clean code, thinking through the architecture before jumping into implementation, and understanding the business problem behind each feature. I am analytical and move easily between technical and business teams.",
+    "about.p3": "In parallel, I am deepening my studies in <strong>cybersecurity</strong> and <strong>software engineering</strong> through postgraduate programs, and I build my own projects, usually high-performance landing pages and automations.",
+    "sec.02.num": "02, Experience",
+    "sec.02.h": "Over three years building and maintaining enterprise software.",
+    "exp.1.role": "Mid-level Full Stack Developer",
+    "exp.1.desc": "Promoted to a role with greater technical autonomy maintaining and evolving the corporate contract management system. I architect and implement advanced cross-platform integrations, write complex IronPython automation scripts, and ensure the performance, security and scalability of the RESTful APIs consumed by internal clients and Supravizio / BPMN flows. Agile team (Scrum).",
+    "exp.2.role": "IT Analyst",
+    "exp.2.desc": "Web application development with PHP and Yii2: building robust CRUDs, maintaining existing systems and implementing REST APIs for integration between corporate systems. Process automation with BPMN, Supravizio and IronPython, advanced form validations and SQL/MySQL database modeling.",
+    "exp.3.role": "IT Intern",
+    "exp.3.desc": "My first professional experience in the field: supporting the development and automation of corporate processes, with Python / IronPython scripts, building and maintaining Supravizio workflows and mapping processes with BPMN.",
+    "edu.title": "Education",
+    "edu.1.t": "Cybersecurity Specialization",
+    "edu.1.s": "Cruzeiro do Sul Virtual &middot; Postgraduate <em>(in progress)</em>",
+    "edu.2.t": "Software Engineering",
+    "edu.2.s": "Uniamérica &middot; Postgraduate (Lato Sensu)",
+    "edu.3.t": "Systems Analysis and Development",
+    "edu.3.s": "Estácio &middot; Technologist degree",
+    "sec.03.num": "03, Stack",
+    "sec.03.h": "Tools I use day to day, grouped by the role they play.",
+    "stack.mvc": "MVC architecture",
+    "stack.auth": "Authentication &amp; security",
+    "stack.responsive": "Responsive layout",
+    "stack.auto.h": "Automation &amp; data",
+    "stack.integration": "Systems integration",
+    "sec.04.num": "04, Projects",
+    "sec.04.h": "Recent work, focused on performance and conversion.",
+    "proj.case.type": "Corporate project, under NDA",
+    "proj.case.h": "Contract Management System",
+    "proj.case.desc": "A corporate system I help architect and evolve: secure REST APIs, BPMN / Supravizio process automation and IronPython scripts, integrating platforms and serving internal clients end to end.",
+    "proj.case.note": "Internal project, no public link.",
+    "proj.ionia.type": "Landing page, product",
+    "proj.ionia.desc": "Launch landing page for a fictional gaming mouse, simulating a real premium product site. Focus on UX, advanced animations and technical storytelling.",
+    "proj.nos.type": "Landing page, consulting",
+    "proj.nos.desc": "Consulting landing page for software development and architecture. Dark layout, neon accents, responsive cards and a clear booking CTA.",
+    "proj.fit.type": "Landing page, digital product",
+    "proj.fit.desc": "Page for a smart training program, aimed at people seeking performance based on methodology, technology and follow-up. Clean, conversion-focused layout.",
+    "tag.responsive": "Responsive",
+    "proj.dev.type": "Landing page, digital product",
+    "proj.dev.desc": "Landing page for a program aimed at developers who want to launch digital products in a lean, professional way.",
+    "link.live": "View live",
+    "link.code": "Code",
+    "sec.05.num": "05, Contact",
+    "contact.title": "Let's bring your idea to life?",
+    "contact.lead": "Whether you want to evolve an existing system, build something new or talk about process automation, just fill in the form below.",
+    "form.nome": "Name",
+    "form.nome.ph": "What's your name?",
+    "form.contato": "Your email or phone <span>(so I can reply)</span>",
+    "form.contato.ph": "email@example.com or +55 61 9....",
+    "form.tipo": "What do you need?",
+    "form.resumo": "Project summary",
+    "form.resumo.ph": "Tell me in a few lines what you have in mind.",
+    "opt.landing": "Landing page",
+    "opt.site": "Company website",
+    "opt.api": "System / REST API",
+    "opt.auto": "Process automation",
+    "opt.maint": "System maintenance / evolution",
+    "opt.other": "Other / not sure yet",
+    "form.error": "Please fill in your name and the summary to send.",
+    "btn.wpp": "Send via WhatsApp",
+    "btn.email": "Rather use email",
+    "contact.or": "or reach me directly:",
+    "label.email": "Email",
+    "footer.role": "Full Stack Developer &middot; PHP &middot; Yii2 &middot; REST APIs",
+  };
+
+  const i18nNodes = Array.from(document.querySelectorAll("[data-i18n]"));
+  const phNodes = Array.from(document.querySelectorAll("[data-i18n-ph]"));
+  const ptHTML = new Map();
+  const ptPh = new Map();
+  i18nNodes.forEach((n) => ptHTML.set(n, n.innerHTML));
+  phNodes.forEach((n) => ptPh.set(n, n.getAttribute("placeholder") || ""));
+
+  const toggleBtn = document.querySelector("[data-lang-toggle]");
+
+  const applyLang = (lang) => {
+    const en = lang === "en";
+    i18nNodes.forEach((n) => {
+      const key = n.getAttribute("data-i18n");
+      n.innerHTML = en ? (key in EN ? EN[key] : ptHTML.get(n)) : ptHTML.get(n);
+    });
+    phNodes.forEach((n) => {
+      const key = n.getAttribute("data-i18n-ph");
+      n.setAttribute("placeholder", en ? (key in EN ? EN[key] : ptPh.get(n)) : ptPh.get(n));
+    });
+    document.documentElement.lang = en ? "en" : "pt-BR";
+    if (toggleBtn) {
+      toggleBtn.textContent = en ? "PT" : "EN";
+      toggleBtn.setAttribute("aria-label", en ? "Mudar para português" : "Switch to English");
+    }
+    try { localStorage.setItem("lang", lang); } catch (e) {}
+  };
+
+  let saved = null;
+  try { saved = localStorage.getItem("lang"); } catch (e) {}
+  applyLang(saved === "en" ? "en" : "pt");
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener("click", () => {
+      applyLang(document.documentElement.lang === "en" ? "pt" : "en");
+    });
+  }
 })();

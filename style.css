@@ -296,6 +296,37 @@ ul, ol { list-style: none; padding: 0; }
 .project-links a:first-child { color: var(--accent); }
 .project-links a:hover { color: var(--accent-2); }
 
+/* header actions + toggle de idioma */
+.header-actions { display: flex; align-items: center; gap: .6rem; }
+.lang-toggle {
+  font-family: var(--font-mono); font-size: .78rem; font-weight: 500;
+  color: var(--ink-2); background: var(--bg-2); border: 1px solid var(--line-2);
+  padding: .42rem .7rem; border-radius: 9px; cursor: pointer; letter-spacing: .04em;
+  transition: color .2s, border-color .2s, background .2s;
+}
+.lang-toggle:hover { color: var(--accent); border-color: var(--accent); }
+
+/* card de destaque corporativo (sem link, sob NDA) */
+.project--case .project-visual {
+  display: flex; align-items: center; justify-content: center;
+  aspect-ratio: 16 / 10; color: var(--accent);
+  background:
+    radial-gradient(120% 120% at 80% 0%, rgba(52, 211, 153, .16), transparent 60%),
+    linear-gradient(150deg, var(--bg-3), var(--bg-2));
+  border-bottom: 1px solid var(--line);
+}
+.project--case { border-color: var(--line-2); }
+.project--case:hover { transform: translateY(-4px); }
+.project-note {
+  font-family: var(--font-mono); font-size: .76rem; color: var(--muted);
+  margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--line);
+  display: flex; align-items: center; gap: .45rem;
+}
+.project-note::before {
+  content: ""; width: 7px; height: 7px; border-radius: 50%;
+  background: var(--accent-2); flex: none;
+}
+
 /* -------------------------------- contact -------------------------------- */
 .contact { display: flex; justify-content: center; }
 .contact-inner {

@@ -12,7 +12,7 @@
     <meta name="author" content="Jefferson Gabriel" />
     <meta name="theme-color" content="#0C0F16" />
 
-    <!-- Open Graph -->
+    <!-- Open Graph / compartilhamento -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Jefferson Gabriel, Desenvolvedor Full Stack" />
     <meta
@@ -20,6 +20,15 @@
       content="PHP (Yii2), APIs REST e automação de processos corporativos. Portfólio e projetos."
     />
     <meta property="og:locale" content="pt_BR" />
+    <meta property="og:url" content="https://ojeffcodes.com.br/" />
+    <meta property="og:image" content="https://ojeffcodes.com.br/images/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Jefferson Gabriel, Desenvolvedor Full Stack Pleno" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jefferson Gabriel, Desenvolvedor Full Stack" />
+    <meta name="twitter:description" content="PHP (Yii2), APIs REST e automação de processos corporativos." />
+    <meta name="twitter:image" content="https://ojeffcodes.com.br/images/og-image.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -36,7 +45,7 @@
   </head>
 
   <body>
-    <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+    <a href="#conteudo" class="skip-link" data-i18n="skip">Pular para o conteúdo</a>
 
     <header class="site-header" data-header>
       <div class="wrap header-inner">
@@ -45,23 +54,26 @@
         </a>
 
         <nav class="primary-nav" id="primary-nav" aria-label="Navegação principal">
-          <a href="#sobre">Sobre</a>
-          <a href="#experiencia">Experiência</a>
-          <a href="#stack">Stack</a>
-          <a href="#projetos">Projetos</a>
-          <a href="#contato" class="nav-cta">Contato</a>
+          <a href="#sobre" data-i18n="nav.sobre">Sobre</a>
+          <a href="#experiencia" data-i18n="nav.exp">Experiência</a>
+          <a href="#stack" data-i18n="nav.stack">Stack</a>
+          <a href="#projetos" data-i18n="nav.proj">Projetos</a>
+          <a href="#contato" class="nav-cta" data-i18n="nav.contato">Contato</a>
         </nav>
 
-        <button
-          class="nav-toggle"
-          type="button"
-          aria-label="Abrir menu"
-          aria-expanded="false"
-          aria-controls="primary-nav"
-        >
-          <span></span>
-          <span></span>
-        </button>
+        <div class="header-actions">
+          <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch to English">EN</button>
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="primary-nav"
+          >
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -71,16 +83,16 @@
         <div class="wrap hero-inner">
           <p class="eyebrow" data-animate>
             <span class="status-dot" aria-hidden="true"></span>
-            Disponível para projetos freelance
+            <span data-i18n="hero.eyebrow">Disponível para projetos freelance</span>
           </p>
 
-          <h1 class="hero-title" data-animate>
+          <h1 class="hero-title" data-animate data-i18n="hero.title">
             Desenvolvedor <em>full stack</em> que constrói sistemas
             corporativos, <span class="hl">APIs REST</span> e
             <span class="hl">automações</span> de ponta a ponta.
           </h1>
 
-          <p class="hero-lead" data-animate>
+          <p class="hero-lead" data-animate data-i18n="hero.lead">
             Sou o Jefferson. Moro em Brasília e trabalho há mais de três anos
             cuidando de software corporativo em <strong>PHP&nbsp;/&nbsp;Yii2</strong>,
             do levantamento de requisitos com as áreas de negócio até a
@@ -88,28 +100,31 @@
           </p>
 
           <div class="hero-cta" data-animate>
-            <a href="#projetos" class="btn btn-primary">Ver projetos</a>
-            <a href="#contato" class="btn btn-ghost">
+            <a href="#projetos" class="btn btn-primary" data-i18n="btn.projetos">Ver projetos</a>
+            <a href="#contato" class="btn btn-ghost" data-i18n="btn.contato">
               Entrar em contato <span aria-hidden="true">→</span>
+            </a>
+            <a href="Jefferson-Gabriel-CV.pdf" class="btn btn-ghost" download>
+              <span aria-hidden="true">↓</span> <span data-i18n="btn.cv">Baixar CV</span>
             </a>
           </div>
 
           <dl class="hero-facts" data-animate>
             <div>
-              <dt>Atualmente</dt>
-              <dd>Desenvolvedor Full Stack Pleno<br /><span>Stefanini · alocado na BBTS</span></dd>
+              <dt data-i18n="facts.now.t">Atualmente</dt>
+              <dd data-i18n="facts.now.d">Desenvolvedor Full Stack Pleno<br /><span>Stefanini, alocado na BBTS</span></dd>
             </div>
             <div>
-              <dt>Stack</dt>
-              <dd>PHP · Yii2 · APIs REST<br /><span>BPMN · Supravizio · IronPython</span></dd>
+              <dt data-i18n="facts.stack.t">Stack</dt>
+              <dd data-i18n="facts.stack.d">PHP · Yii2 · APIs REST<br /><span>BPMN · Supravizio · IronPython</span></dd>
             </div>
             <div>
-              <dt>Base</dt>
-              <dd>Taguatinga, DF<br /><span>Brasil · Remoto</span></dd>
+              <dt data-i18n="facts.base.t">Base</dt>
+              <dd data-i18n="facts.base.d">Taguatinga, DF<br /><span>Brasil · Remoto</span></dd>
             </div>
             <div>
-              <dt>Idiomas</dt>
-              <dd>Português (nativo)<br /><span>Inglês (profissional)</span></dd>
+              <dt data-i18n="facts.lang.t">Idiomas</dt>
+              <dd data-i18n="facts.lang.d">Português (nativo)<br /><span>Inglês (profissional)</span></dd>
             </div>
           </dl>
         </div>
@@ -119,12 +134,12 @@
       <section id="sobre" class="section">
         <div class="wrap section-grid">
           <header class="section-head">
-            <p class="section-num">01, Sobre</p>
-            <h2>Foco em sistemas que precisam ser seguros, integrados e escaláveis.</h2>
+            <p class="section-num" data-i18n="sec.01.num">01, Sobre</p>
+            <h2 data-i18n="sec.01.h">Foco em sistemas que precisam ser seguros, integrados e escaláveis.</h2>
           </header>
 
           <div class="section-body prose">
-            <p>
+            <p data-i18n="about.p1">
               Atuo como desenvolvedor full stack pleno com foco em sistemas
               corporativos, APIs REST e automação de processos de negócio. Hoje
               sou responsável por arquitetar e evoluir um sistema de
@@ -132,13 +147,13 @@
               levantamento de requisitos, modelagem de banco, código,
               integrações entre plataformas e apresentação das entregas.
             </p>
-            <p>
+            <p data-i18n="about.p2">
               Gosto de código limpo, de pensar a arquitetura antes de sair
               implementando e de entender o problema de negócio por trás de
               cada feature. Tenho perfil analítico e transito bem entre o
               técnico e as áreas de negócio.
             </p>
-            <p>
+            <p data-i18n="about.p3">
               Em paralelo, aprofundo meus estudos em
               <strong>cibersegurança</strong> e
               <strong>engenharia de software</strong> em pós-graduação, e
@@ -153,8 +168,8 @@
       <section id="experiencia" class="section section-alt">
         <div class="wrap section-grid">
           <header class="section-head">
-            <p class="section-num">02, Experiência</p>
-            <h2>Mais de três anos construindo e sustentando software corporativo.</h2>
+            <p class="section-num" data-i18n="sec.02.num">02, Experiência</p>
+            <h2 data-i18n="sec.02.h">Mais de três anos construindo e sustentando software corporativo.</h2>
           </header>
 
           <div class="section-body">
@@ -165,9 +180,9 @@
                   <span class="place">Brasília, DF</span>
                 </div>
                 <div class="timeline-main">
-                  <h3>Desenvolvedor Full Stack Pleno</h3>
+                  <h3 data-i18n="exp.1.role">Desenvolvedor Full Stack Pleno</h3>
                   <p class="company">Stefanini Brasil · alocado na BBTS</p>
-                  <p>
+                  <p data-i18n="exp.1.desc">
                     Promovido a um papel de maior autonomia técnica na
                     sustentação e evolução do sistema corporativo de
                     gerenciamento de contratos. Arquiteto e implemento
@@ -190,9 +205,9 @@
                   <span class="place">Brasília, DF</span>
                 </div>
                 <div class="timeline-main">
-                  <h3>Analista de TI</h3>
+                  <h3 data-i18n="exp.2.role">Analista de TI</h3>
                   <p class="company">G4F</p>
-                  <p>
+                  <p data-i18n="exp.2.desc">
                     Desenvolvimento de aplicações web com PHP e Yii2: criação
                     de CRUDs robustos, manutenção de sistemas existentes e
                     implementação de APIs REST para integração entre sistemas
@@ -213,9 +228,9 @@
                   <span class="place">Brasília, DF</span>
                 </div>
                 <div class="timeline-main">
-                  <h3>Estagiário de Tecnologia da Informação</h3>
+                  <h3 data-i18n="exp.3.role">Estagiário de Tecnologia da Informação</h3>
                   <p class="company">BB Tecnologia e Serviços</p>
-                  <p>
+                  <p data-i18n="exp.3.desc">
                     Primeira experiência profissional na área: apoio ao
                     desenvolvimento e à automação de processos corporativos,
                     com scripts em Python / IronPython, criação e manutenção de
@@ -229,27 +244,27 @@
             </ol>
 
             <div class="education" data-animate>
-              <h3 class="education-title">Formação</h3>
+              <h3 class="education-title" data-i18n="edu.title">Formação</h3>
               <ul>
                 <li>
                   <span class="edu-period">2025 a 2026</span>
                   <div>
-                    <strong>Especialização em Cibersegurança</strong>
-                    <span>Cruzeiro do Sul Virtual · Pós-graduação <em>(em andamento)</em></span>
+                    <strong data-i18n="edu.1.t">Especialização em Cibersegurança</strong>
+                    <span data-i18n="edu.1.s">Cruzeiro do Sul Virtual · Pós-graduação <em>(em andamento)</em></span>
                   </div>
                 </li>
                 <li>
                   <span class="edu-period">2024 a 2025</span>
                   <div>
-                    <strong>Engenharia de Software</strong>
-                    <span>Uniamérica · Pós-graduação Lato Sensu</span>
+                    <strong data-i18n="edu.2.t">Engenharia de Software</strong>
+                    <span data-i18n="edu.2.s">Uniamérica · Pós-graduação Lato Sensu</span>
                   </div>
                 </li>
                 <li>
                   <span class="edu-period">2022 a 2024</span>
                   <div>
-                    <strong>Análise e Desenvolvimento de Sistemas</strong>
-                    <span>Estácio · CST (Tecnólogo)</span>
+                    <strong data-i18n="edu.3.t">Análise e Desenvolvimento de Sistemas</strong>
+                    <span data-i18n="edu.3.s">Estácio · CST (Tecnólogo)</span>
                   </div>
                 </li>
               </ul>
@@ -262,8 +277,8 @@
       <section id="stack" class="section">
         <div class="wrap section-grid">
           <header class="section-head">
-            <p class="section-num">03, Stack</p>
-            <h2>Ferramentas que uso no dia a dia, pelo papel que desempenham.</h2>
+            <p class="section-num" data-i18n="sec.03.num">03, Stack</p>
+            <h2 data-i18n="sec.03.h">Ferramentas que uso no dia a dia, pelo papel que desempenham.</h2>
           </header>
 
           <div class="section-body">
@@ -273,9 +288,9 @@
                 <ul>
                   <li>PHP</li>
                   <li>Yii2 Framework</li>
-                  <li>Arquitetura MVC</li>
+                  <li data-i18n="stack.mvc">Arquitetura MVC</li>
                   <li>APIs RESTful</li>
-                  <li>Autenticação &amp; segurança</li>
+                  <li data-i18n="stack.auth">Autenticação &amp; segurança</li>
                 </ul>
               </article>
               <article class="stack-card" data-animate>
@@ -283,17 +298,17 @@
                 <ul>
                   <li>HTML5 &amp; CSS3</li>
                   <li>JavaScript</li>
-                  <li>Layout responsivo</li>
+                  <li data-i18n="stack.responsive">Layout responsivo</li>
                   <li>Landing pages</li>
                 </ul>
               </article>
               <article class="stack-card" data-animate>
-                <h3>Automação &amp; dados</h3>
+                <h3 data-i18n="stack.auto.h">Automação &amp; dados</h3>
                 <ul>
                   <li>BPMN</li>
                   <li>Supravizio</li>
                   <li>Python / IronPython</li>
-                  <li>Integração entre sistemas</li>
+                  <li data-i18n="stack.integration">Integração entre sistemas</li>
                   <li>SQL / MySQL</li>
                 </ul>
               </article>
@@ -306,88 +321,115 @@
       <section id="projetos" class="section section-alt">
         <div class="wrap section-grid">
           <header class="section-head">
-            <p class="section-num">04, Projetos</p>
-            <h2>Trabalhos recentes, com foco em performance e conversão.</h2>
+            <p class="section-num" data-i18n="sec.04.num">04, Projetos</p>
+            <h2 data-i18n="sec.04.h">Trabalhos recentes, com foco em performance e conversão.</h2>
           </header>
 
           <div class="section-body">
             <div class="projects">
+              <article class="project project--case" data-animate>
+                <div class="project-visual" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" width="56" height="56" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="9" y="14" width="46" height="30" rx="4" />
+                    <path d="M9 24h46M19 34h12M19 39h20" />
+                    <circle cx="15" cy="19" r="1.4" fill="currentColor" stroke="none" />
+                    <path d="M24 50h16M32 44v6" />
+                  </svg>
+                </div>
+                <div class="project-meta">
+                  <span class="project-type" data-i18n="proj.case.type">Projeto corporativo, sob NDA</span>
+                  <h3 data-i18n="proj.case.h">Sistema de Gestão de Contratos</h3>
+                  <p data-i18n="proj.case.desc">
+                    Sistema corporativo que ajudo a arquitetar e evoluir:
+                    APIs REST seguras, automações de processos em BPMN /
+                    Supravizio e scripts em IronPython, integrando plataformas
+                    e atendendo clientes internos de ponta a ponta.
+                  </p>
+                  <ul class="tags">
+                    <li>PHP / Yii2</li><li>APIs REST</li><li>BPMN</li><li>IronPython</li>
+                  </ul>
+                  <p class="project-note" data-i18n="proj.case.note">
+                    Projeto interno, sem link público.
+                  </p>
+                </div>
+              </article>
+
               <article class="project" data-animate>
-                <a class="project-thumb" href="https://nosreffej1.github.io/Ionia-X-Mouse-Gamer/" target="_blank" rel="noreferrer" aria-label="Abrir IONIA GEAR X">
+                <a class="project-thumb" href="https://nosreffej1.github.io/Ionia-X-Mouse-Gamer/" target="_blank" rel="noreferrer" aria-label="IONIA GEAR X">
                   <img src="images/ionia.jpeg" alt="Preview da landing page IONIA GEAR X" loading="lazy" />
                 </a>
                 <div class="project-meta">
-                  <span class="project-type">Landing page · produto</span>
+                  <span class="project-type" data-i18n="proj.ionia.type">Landing page, produto</span>
                   <h3>IONIA GEAR X</h3>
-                  <p>
+                  <p data-i18n="proj.ionia.desc">
                     Landing de lançamento para um mouse gamer fictício,
                     simulando um site real de produto premium. Foco em UX,
                     animações avançadas e narrativa técnica.
                   </p>
                   <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
                   <div class="project-links">
-                    <a href="https://nosreffej1.github.io/Ionia-X-Mouse-Gamer/" target="_blank" rel="noreferrer">Ver online <span aria-hidden="true">↗</span></a>
-                    <a href="https://github.com/nosreffej1/Ionia-X-Mouse-Gamer" target="_blank" rel="noreferrer">Código <span aria-hidden="true">→</span></a>
+                    <a href="https://nosreffej1.github.io/Ionia-X-Mouse-Gamer/" target="_blank" rel="noreferrer"><span data-i18n="link.live">Ver online</span> <span aria-hidden="true">↗</span></a>
+                    <a href="https://github.com/nosreffej1/Ionia-X-Mouse-Gamer" target="_blank" rel="noreferrer"><span data-i18n="link.code">Código</span> <span aria-hidden="true">→</span></a>
                   </div>
                 </div>
               </article>
 
               <article class="project" data-animate>
-                <a class="project-thumb" href="https://nosreffej1.github.io/NosreffejTech/" target="_blank" rel="noreferrer" aria-label="Abrir Nosreffej Tech">
+                <a class="project-thumb" href="https://nosreffej1.github.io/NosreffejTech/" target="_blank" rel="noreferrer" aria-label="Nosreffej Tech">
                   <img src="images/nosreffejLp.jpeg" alt="Preview da landing page Nosreffej Tech" loading="lazy" />
                 </a>
                 <div class="project-meta">
-                  <span class="project-type">Landing page · consultoria</span>
+                  <span class="project-type" data-i18n="proj.nos.type">Landing page, consultoria</span>
                   <h3>Nosreffej Tech</h3>
-                  <p>
+                  <p data-i18n="proj.nos.desc">
                     Landing de consultoria em desenvolvimento e arquitetura de
                     software. Layout escuro, elementos em neon, cards
                     responsivos e CTA claro para agendamento.
                   </p>
                   <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
                   <div class="project-links">
-                    <a href="https://nosreffej1.github.io/NosreffejTech/" target="_blank" rel="noreferrer">Ver online <span aria-hidden="true">↗</span></a>
-                    <a href="https://github.com/nosreffej1/NosreffejTech" target="_blank" rel="noreferrer">Código <span aria-hidden="true">→</span></a>
+                    <a href="https://nosreffej1.github.io/NosreffejTech/" target="_blank" rel="noreferrer"><span data-i18n="link.live">Ver online</span> <span aria-hidden="true">↗</span></a>
+                    <a href="https://github.com/nosreffej1/NosreffejTech" target="_blank" rel="noreferrer"><span data-i18n="link.code">Código</span> <span aria-hidden="true">→</span></a>
                   </div>
                 </div>
               </article>
 
               <article class="project" data-animate>
-                <a class="project-thumb" href="https://nosreffej1.github.io/FitTechLab/" target="_blank" rel="noreferrer" aria-label="Abrir FitTech Lab">
+                <a class="project-thumb" href="https://nosreffej1.github.io/FitTechLab/" target="_blank" rel="noreferrer" aria-label="FitTech Lab">
                   <img src="images/fitTech.jpeg" alt="Preview da landing page FitTech Lab" loading="lazy" />
                 </a>
                 <div class="project-meta">
-                  <span class="project-type">Landing page · infoproduto</span>
+                  <span class="project-type" data-i18n="proj.fit.type">Landing page, infoproduto</span>
                   <h3>FitTech Lab</h3>
-                  <p>
+                  <p data-i18n="proj.fit.desc">
                     Página de um programa de treinos inteligentes, voltado a
                     quem busca performance baseada em metodologia, tecnologia e
                     acompanhamento. Layout limpo, focado em conversão.
                   </p>
-                  <ul class="tags"><li>HTML</li><li>CSS</li><li>Responsivo</li></ul>
+                  <ul class="tags"><li>HTML</li><li>CSS</li><li data-i18n="tag.responsive">Responsivo</li></ul>
                   <div class="project-links">
-                    <a href="https://nosreffej1.github.io/FitTechLab/" target="_blank" rel="noreferrer">Ver online <span aria-hidden="true">↗</span></a>
-                    <a href="https://github.com/nosreffej1/FitTechLab" target="_blank" rel="noreferrer">Código <span aria-hidden="true">→</span></a>
+                    <a href="https://nosreffej1.github.io/FitTechLab/" target="_blank" rel="noreferrer"><span data-i18n="link.live">Ver online</span> <span aria-hidden="true">↗</span></a>
+                    <a href="https://github.com/nosreffej1/FitTechLab" target="_blank" rel="noreferrer"><span data-i18n="link.code">Código</span> <span aria-hidden="true">→</span></a>
                   </div>
                 </div>
               </article>
 
               <article class="project" data-animate>
-                <a class="project-thumb" href="https://nosreffej1.github.io/DevLaunch-Pro/" target="_blank" rel="noreferrer" aria-label="Abrir DevLaunch Pro">
+                <a class="project-thumb" href="https://nosreffej1.github.io/DevLaunch-Pro/" target="_blank" rel="noreferrer" aria-label="DevLaunch Pro">
                   <img src="images/devLaunch.jpeg" alt="Preview da landing page DevLaunch Pro" loading="lazy" />
                 </a>
                 <div class="project-meta">
-                  <span class="project-type">Landing page · infoproduto</span>
+                  <span class="project-type" data-i18n="proj.dev.type">Landing page, infoproduto</span>
                   <h3>DevLaunch Pro</h3>
-                  <p>
+                  <p data-i18n="proj.dev.desc">
                     Landing para um programa voltado a desenvolvedores que
                     querem lançar produtos digitais de forma enxuta e
                     profissional.
                   </p>
                   <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
                   <div class="project-links">
-                    <a href="https://nosreffej1.github.io/DevLaunch-Pro/" target="_blank" rel="noreferrer">Ver online <span aria-hidden="true">↗</span></a>
-                    <a href="https://github.com/nosreffej1/DevLaunch-Pro" target="_blank" rel="noreferrer">Código <span aria-hidden="true">→</span></a>
+                    <a href="https://nosreffej1.github.io/DevLaunch-Pro/" target="_blank" rel="noreferrer"><span data-i18n="link.live">Ver online</span> <span aria-hidden="true">↗</span></a>
+                    <a href="https://github.com/nosreffej1/DevLaunch-Pro" target="_blank" rel="noreferrer"><span data-i18n="link.code">Código</span> <span aria-hidden="true">→</span></a>
                   </div>
                 </div>
               </article>
@@ -400,58 +442,58 @@
       <section id="contato" class="section">
         <div class="wrap contact">
           <div class="contact-inner" data-animate>
-            <p class="section-num">05, Contato</p>
-            <h2 class="contact-title">Vamos tirar a sua ideia do papel?</h2>
-            <p class="contact-lead">
+            <p class="section-num" data-i18n="sec.05.num">05, Contato</p>
+            <h2 class="contact-title" data-i18n="contact.title">Vamos tirar a sua ideia do papel?</h2>
+            <p class="contact-lead" data-i18n="contact.lead">
               Se você quer evoluir um sistema existente, construir algo novo ou
               conversar sobre automação de processos, é só preencher abaixo.
             </p>
 
             <form class="contact-form" id="contact-form" novalidate>
               <div class="field">
-                <label for="cf-nome">Nome</label>
-                <input type="text" id="cf-nome" name="nome" placeholder="Como você se chama?" required />
+                <label for="cf-nome" data-i18n="form.nome">Nome</label>
+                <input type="text" id="cf-nome" name="nome" data-i18n-ph="form.nome.ph" placeholder="Como você se chama?" required />
               </div>
 
               <div class="field">
-                <label for="cf-contato">Seu e-mail ou telefone <span>(para eu responder)</span></label>
-                <input type="text" id="cf-contato" name="contato" placeholder="email@exemplo.com ou (61) 9...." />
+                <label for="cf-contato" data-i18n="form.contato">Seu e-mail ou telefone <span>(para eu responder)</span></label>
+                <input type="text" id="cf-contato" name="contato" data-i18n-ph="form.contato.ph" placeholder="email@exemplo.com ou (61) 9...." />
               </div>
 
               <div class="field">
-                <label for="cf-tipo">O que você precisa?</label>
+                <label for="cf-tipo" data-i18n="form.tipo">O que você precisa?</label>
                 <select id="cf-tipo" name="tipo">
-                  <option value="Landing page">Landing page</option>
-                  <option value="Site institucional">Site institucional</option>
-                  <option value="Sistema / API REST">Sistema / API REST</option>
-                  <option value="Automação de processos">Automação de processos</option>
-                  <option value="Manutenção / evolução de sistema">Manutenção / evolução de sistema</option>
-                  <option value="Outro">Outro / não sei ainda</option>
+                  <option value="Landing page" data-i18n="opt.landing">Landing page</option>
+                  <option value="Site institucional" data-i18n="opt.site">Site institucional</option>
+                  <option value="Sistema / API REST" data-i18n="opt.api">Sistema / API REST</option>
+                  <option value="Automação de processos" data-i18n="opt.auto">Automação de processos</option>
+                  <option value="Manutenção / evolução de sistema" data-i18n="opt.maint">Manutenção / evolução de sistema</option>
+                  <option value="Outro" data-i18n="opt.other">Outro / não sei ainda</option>
                 </select>
               </div>
 
               <div class="field">
-                <label for="cf-resumo">Resumo do projeto</label>
-                <textarea id="cf-resumo" name="resumo" rows="4" placeholder="Conte em poucas linhas o que você tem em mente." required></textarea>
+                <label for="cf-resumo" data-i18n="form.resumo">Resumo do projeto</label>
+                <textarea id="cf-resumo" name="resumo" rows="4" data-i18n-ph="form.resumo.ph" placeholder="Conte em poucas linhas o que você tem em mente." required></textarea>
               </div>
 
-              <p class="form-error" id="cf-error" role="alert" hidden>Preencha o nome e o resumo para enviar.</p>
+              <p class="form-error" id="cf-error" role="alert" hidden data-i18n="form.error">Preencha o nome e o resumo para enviar.</p>
 
               <div class="form-actions">
                 <button type="submit" class="btn btn-primary" data-channel="whatsapp">
-                  Enviar pelo WhatsApp <span aria-hidden="true">→</span>
+                  <span data-i18n="btn.wpp">Enviar pelo WhatsApp</span> <span aria-hidden="true">→</span>
                 </button>
-                <button type="button" class="btn btn-ghost" data-channel="email">
+                <button type="button" class="btn btn-ghost" data-channel="email" data-i18n="btn.email">
                   Prefiro por e-mail
                 </button>
               </div>
             </form>
 
-            <p class="contact-or">ou fale direto:</p>
+            <p class="contact-or" data-i18n="contact.or">ou fale direto:</p>
 
             <ul class="contact-list">
               <li>
-                <span class="contact-label">E-mail</span>
+                <span class="contact-label" data-i18n="label.email">E-mail</span>
                 <a href="mailto:jeffersongabriel.contato@gmail.com?subject=Contato%20via%20portf%C3%B3lio">jeffersongabriel.contato@gmail.com</a>
               </li>
               <li>
@@ -475,7 +517,7 @@
     <footer class="site-footer">
       <div class="wrap footer-inner">
         <p>© <span id="year"></span> Jefferson Gabriel, Brasília, DF</p>
-        <p class="footer-note">Desenvolvedor Full Stack · PHP · Yii2 · APIs REST</p>
+        <p class="footer-note" data-i18n="footer.role">Desenvolvedor Full Stack · PHP · Yii2 · APIs REST</p>
       </div>
     </footer>
 
