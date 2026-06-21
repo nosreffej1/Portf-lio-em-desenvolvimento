@@ -381,11 +381,7 @@ ul, ol { list-style: none; padding: 0; }
   border-radius: 11px; padding: .8rem .95rem; transition: border-color .2s, box-shadow .2s;
 }
 .contact-form textarea { resize: vertical; min-height: 110px; }
-.contact-form select {
-  appearance: none; cursor: pointer;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8' fill='none' stroke='%237C879D' stroke-width='1.6'%3E%3Cpath d='M1 1.5 6 6.5l5-5'/%3E%3C/svg%3E");
-  background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.4rem;
-}
+.contact-form select { cursor: pointer; }
 .contact-form input::placeholder,
 .contact-form textarea::placeholder { color: var(--muted); }
 .contact-form input:focus,
